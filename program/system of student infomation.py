@@ -1,3 +1,21 @@
+def read_file(file_name):
+    f = open(file_name,'r')
+    while True:
+        line = f.readline()
+        if line == '':
+            break
+        else:
+            student_info = line.split('\t')
+            student = {'name' = student_info[0],'age' = student_info[1],'qq' = student_info[2]}
+            studentinfo.append(student)
+            
+def write_file(file_name):
+    f = open(file_name,'w')
+    for item in studentinfo:
+        student = '%s\t%s\t%s'%(item['name'] ,item['age'],item['qq'])
+        f.write(student)
+    f.close()
+    
 def print_menu():
     print('='*30)
     print('Student Management System'.center(30))
@@ -51,19 +69,26 @@ def print_all():
         print('%s\t'%i, end='')
         print('%s\t%s\t%s\t'%(item['name'],item['age'],item['qq']))
 
-studentinfo = []
-while True:
-    print_menu()
-    choice = int(input())
-    if choice == 1:
-        add_student()
-    elif choice == 2:
-        search_student()
-    elif choice == 3:
-        modify_student()
-    elif choice == 4:
-        delete_student()
-    elif choice == 5:
-        print_all()
-    else:
-        exit()
+def main():
+    while True:
+        read_file(file_name)
+        studentinfo = []
+        print_menu()
+        choice = int(input())
+        if choice == 1:
+            add_student()
+        elif choice == 2:
+            search_student()
+        elif choice == 3:
+            modify_student()
+        elif choice == 4:
+            delete_student()
+        elif choice == 5:
+            print_all()
+        else:
+            break
+            
+file_name = ''
+mian()
+write_file(filename)
+
