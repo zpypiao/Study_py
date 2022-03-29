@@ -62,8 +62,7 @@ while True:
     elif choice == 3:
         modify_student()
     elif choice == 4:
-        for item in studentinfo:
-            print('%s exist, age: %d, qq: %s' % (item['name'], item['age'], item['qq']))
+        delete_student()
     elif choice == 5:
         print_all()
     else:
