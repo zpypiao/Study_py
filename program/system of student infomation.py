@@ -88,6 +88,6 @@ def main():
         else:
             break
 studentinfo = []           
-file_name = './info.txt'
+file_name = '../data/info.txt'
 main()
 write_file(file_name)
