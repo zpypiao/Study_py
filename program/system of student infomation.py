@@ -5,14 +5,14 @@ def read_file(file_name):
         if line == '':
             break
         else:
-            student_info = line.split('\t')
-            student = {'name' = student_info[0],'age' = student_info[1],'qq' = student_info[2]}
+            student_info = line.strip('\n').split('\t')
+            student = {'name':student_info[0],'age':student_info[1],'qq':student_info[2]}
             studentinfo.append(student)
             
 def write_file(file_name):
     f = open(file_name,'w')
     for item in studentinfo:
-        student = '%s\t%s\t%s'%(item['name'] ,item['age'],item['qq'])
+        student = '%s\t%s\t%s\n'%(item['name'] ,item['age'],item['qq'])
         f.write(student)
     f.close()
     
@@ -51,6 +51,7 @@ def delete_student():
         if item['name'] == name.strip():
             studentinfo.remove(item)
             print('Sucessfully remove %s from the database'% (name))
+            break
     else:
         print('%s is not exist, please try again.'%name)
 
@@ -70,9 +71,8 @@ def print_all():
         print('%s\t%s\t%s\t'%(item['name'],item['age'],item['qq']))
 
 def main():
+    read_file(file_name)
     while True:
-        read_file(file_name)
-        studentinfo = []
         print_menu()
         choice = int(input())
         if choice == 1:
@@ -87,8 +87,7 @@ def main():
             print_all()
         else:
             break
-            
-file_name = ''
-mian()
-write_file(filename)
-
+studentinfo = []           
+file_name = './info.txt'
+main()
+write_file(file_name)
