@@ -10,8 +10,8 @@ class Game:
 	def start_game(self):
 		self.player1.cast()
 		self.player2.cast()
-		'''player1_dice_count_list = [dice.count() for dice in self.player1.dices]
-		player2_dice_count_list = [dice.count() for dice in self.player2.dices]
+		'''player1_dice_count_list = [dice.count for dice in self.player1.dices]
+		player2_dice_count_list = [dice.count for dice in self.player2.dices]
 		print("Player1's count is %d"%player1_dice_count_list)
 		print("Player2's count is %d"%player2_dice_count_list)'''
 		print(self.player1,'\n',self.player2,sep='')
