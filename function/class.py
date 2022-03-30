@@ -6,6 +6,7 @@ class Person:
 		self.age = age
 		
 	#this function will be displayed when object belong this group be deleted
+	#when program is shut down, the object alse will be deleted
 	def __del__(self):
 		print('The object will be deleted, release the space')
 	
