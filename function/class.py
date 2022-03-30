@@ -4,6 +4,10 @@ class Person:
 	def __init__(self),name,age):
 		self.name = name
 		self.age = age
+		
+	#this function will be displayed when object belong this group be deleted
+	def __del__(self):
+		print('The object will be deleted, release the space')
 	
 	#translate the object to this str when print object
 	def __str__(self):
