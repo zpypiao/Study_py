@@ -19,6 +19,7 @@ def read_find(dir,str):
             break
         elif str in line:
             flag = True
+			break
      f.close()
      return flag
 
