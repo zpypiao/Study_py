@@ -2,7 +2,7 @@ class Animal:
 	
 	def __init__(self):
 		self.name = 'animal'
-		self.__str = 'hello world' #the private property can not be inherited
+		self.__str = 'hello world' #all the private property and functions can not be inherited
 	
 	def hello(self):
 		print(self.__str)
