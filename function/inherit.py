@@ -17,6 +17,8 @@ class Dog(Animal):
 	
 	#if son without this, he will inherit his father's
 	def __init__(self,name):
+		#if you want to use the father's __init__ but also retain yourself, use the super
+		super().__init__()
 		seif.name = name
 		
 	def shout(self):
