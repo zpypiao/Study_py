@@ -17,7 +17,7 @@ class Person:
 	#class proporty can be used by all the object belong to it
 	#public proporty
 	name = 'huaman'
-	#private propority
+	#private(hidding) propority
 	__color = 'red'
 	
 class User:
@@ -34,3 +34,11 @@ class User:
 	
 	def __hello(self): #this function can not be use out of the group
 		print('Hello World')
+	
+	@classmethod #classmethod must have this to explain
+	def h_method(cls): #cls repredent the current class
+		print('Hello small human.')
+
+#the propority and method of class can be used by class and object		
+Person.name
+User.h_method()
