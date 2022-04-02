@@ -1,4 +1,5 @@
 #the any object's father is <object>
+#this is the standrand write method
 class A(object):
 	
 	def test(self):
