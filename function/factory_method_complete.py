@@ -3,8 +3,8 @@ class Person(object):
 	def __init__(self,name):
 		self.name = name
     
-	def work(self,axe_type):
-		axe = Factory.creat_axe(axe_type)
+	def work(self):
+		axe = Factory_stone.creat_axe()
 		axe.cut_tree
 		
 class Axe(object):
@@ -27,14 +27,18 @@ class SteelAxe(Axe):
 		
 class Factory(object):
 	
-	@staticmethod
-	def creat_axe(type):
-		if type == 'stone':
-			return StoneAxe('huagangyang')
-		elif type == 'steel':
-			return SteelAxe('taihejin')
-		else:
-			return False
-
-p = Person('prime')
-p.work('stone')
+	def creat_axe(self):
+		pass
+	
+class Factory_stone(Factory):
+	
+	def creat_axe(self):
+		return StoneAxe('huagangyan')
+	
+class Factory_steel(Factory):
+	
+	def creat_axe(self):
+		return SteelAxe('taihejin')
+	
+p = Person('laohuang')
+p.work()
