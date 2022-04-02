@@ -16,5 +16,5 @@ class C(A,B):
 		print('This is the type C')
 		
 c = C()
-C.__mro__ #print the father grade
+C.__mro__ #print the father inherit grade
 c.test() #follow the order number of grade
