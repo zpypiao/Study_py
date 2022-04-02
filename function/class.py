@@ -13,7 +13,13 @@ class Person:
 	#translate the object to this str when print object
 	def __str__(self):
 		return 'Hello World'
-
+	
+	#class proporty can be used by all the object belong to it
+	#public proporty
+	name = 'huaman'
+	#private propority
+	__color = 'red'
+	
 class User:
 	
 	def __init__(self,name,pw):
