@@ -18,7 +18,8 @@ class Person(object):
 		axe.cut_tree()'''
 	
 	def work(self,axe_type):
-		axe = Factory.creat_axe(axe_type)
+		axe = Factory.creat_axe(axe_type) #factory
+		axe = creat_axe(axe_type) #global var
 		axe.cut_tree
 		
 class Axe(object):
@@ -50,5 +51,13 @@ class Factory(object):
 		else:
 			return False
 
+def creat_axe(type):
+		if type == 'stone':
+			return StoneAxe('huagangyang')
+		elif type == 'steel':
+			return SteelAxe('taihejin')
+		else:
+			return False
+	
 p = Person('prime')
 p.work('stone')
