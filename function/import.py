@@ -6,7 +6,7 @@ print(random.randint(0,5))
 from random import ranint
 print(randint(0,5))
 
-from random import*
+from random import* #NOT RECOMMEND
 print(randint(0,5))
 
 import random as rm
