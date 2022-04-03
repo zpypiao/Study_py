@@ -14,3 +14,7 @@ print('This is a test code',istr('acv')) #this will be excuted when import
 
 if __name__ == '__mian__':
 	print('This is a test code',istr('acv')) #when this is a file instead of a module,it will be excuted
+
+'''
+put a __init__.py file in the path of your module, it have no necessary to write anything,but it can be used by python2
+'''
