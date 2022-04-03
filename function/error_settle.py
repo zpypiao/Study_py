@@ -7,6 +7,7 @@ except (FileNotFoundError,ZeroOivisionError) as ex:
 	print(ex) #ex: the error has been captured
 	
 a='123'
+'''
 f = open('text.txt')
 try:	
 	f.write('hello\n')
@@ -14,3 +15,15 @@ try:
 except Exception as ex:#Exception is all error's father
 	print(ex)
 f.close
+'''
+try:
+	f = open('text.txt')
+	f.write('hello\n')
+	f.write('%s'%a)
+except Exception as ex:#Exception is all error's father
+	print(ex)
+else:
+	print('Correct') #it will be dispalyed when there is no wrong 
+finally;
+	if f:
+		f.close()
