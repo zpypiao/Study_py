@@ -49,6 +49,32 @@ class TankMain(object):
 			elif every.type == MOUSEBUTTONDOWN:
 				pass
 		
+class BaseItem(pygame.sprite.Sprite):
+	
+	def __init__(self):
+		pygame.sprite.Sprite.__init__()
+		
+class Tank(BaseItem):
+	#define the ad of class
+	width = 50
+	height = 50
+	
+	def __init__(self):
+		super().__init__()
+		self.width = 200
+		# the default direction is down;UDLR
+		self.direction = 'U'
+		self.images = {}
+		self.images['U'] = pygame.image.load('./image/tankleft.jpg')
+		self.images['D'] = pygame.image.load('./image/tankleft.jpg')
+		self.images['L'] = pygame.image.load('./image/tankleft.jpg')
+		self.images['R'] = pygame.image.load('./image/tankleft.jpg')
+		self.image = self.images[self.direction]
+		# decide the status of tank
+		self.live = True
+		
+		
+		
 if __name__ == '__main__':
 	game = TankMain()
 	game.startGame()
