@@ -24,7 +24,33 @@ class Person:
 	name = 'huaman'
 	#private(hidding) propority
 	__color = 'red'
+	__num = 100
+	__kile = 50
 	
+	# get private proporty
+	def getnum(self):
+		return self.__color
+	
+	# change private proporty
+	def setnum(self, num):
+		if num>100:
+			self.__num = num
+			
+	# property function
+	num = property(getnum, setnum)
+	
+	@property
+	def kile(self): # getter
+		return self.__kile
+	
+	@num.setter
+	# the name of function must be same with private proporty
+	def kile(self, x): # setter
+		self.__kile = x
+			
+n = Person(name, age)
+n.num
+n.num = 20
 class User:
 	
 	def __init__(self,name,pw):
