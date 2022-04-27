@@ -4,6 +4,9 @@ class Person:
 	def __init__(self,name,age):
 		self.name = name
 		self.age = age
+		
+	# only the prooperty in this turple can be add or change dynamically
+	__slots__ = ('name', 'age')
 	
 	#when create an object, it will be used
 	#it must return an object, or init will not be used.
@@ -77,3 +80,16 @@ class User:
 #the propority and method of class can be used by class and object		
 Person.name
 User.h_method()
+
+import types
+
+def print_info(self):
+	print(self.name)
+	print(self.age)
+	
+p = Person('piao', 20)
+
+# add the function to object p
+p.print_info = types.MethodType(print_info, p)
+
+class 
