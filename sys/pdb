@@ -1,0 +1,6 @@
+python -m pdb some.py # adjust the program when excute
+
+import pdb
+pdb.run('testfun(argv)') # corrate adjust
+
+pdb.set_trace() # set the stop point
