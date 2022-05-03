@@ -62,3 +62,4 @@ while True:
     num += 1
 s.close()
 
+bytes(message, encoding='utf-8')
