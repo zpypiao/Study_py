@@ -63,3 +63,4 @@ while True:
 s.close()
 
 bytes(message, encoding='utf-8')
+message.encode('utf-8')
